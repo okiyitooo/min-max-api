@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kenny</groupId>
-	<artifactId>min-max-api</artifactId>
+	<artifactId>minmaxapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>min-max-api</name>
+	<name>minmaxapi</name>
 	<description>Creative way to learn algorithm</description>
 	<url/>
 	<licenses>
@@ -50,6 +50,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.1.1</version>
 		</dependency>
 	</dependencies>
 

@@ -1,4 +1,4 @@
-package com.kenny.min_max_api;
+package com.kenny.minmaxapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
