@@ -2,6 +2,7 @@ package com.kenny.minmaxapi.controller;
 
 import com.kenny.minmaxapi.dto.AlgorithmRequest;
 import com.kenny.minmaxapi.dto.AlgorithmResponse;
+import com.kenny.minmaxapi.dto.ErrorResponse;
 import com.kenny.minmaxapi.service.AlgorithmService;
 
 import java.util.List;
@@ -35,7 +36,13 @@ public class AlgorithmController {
         if (request.getArray() != null) {
             for (int d : request.getQueries()) {
                 if (d < 1 || d > request.getArray().size()) {
-                    return ResponseEntity.badRequest().body("Invalid query value: " + d);
+                    
+                    // Alternatively, return ResponseEntity.badRequest().body("Invalid query value: " + d);
+                    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorResponse(
+                            "Invalid query value: " + d,
+                            String.valueOf(System.currentTimeMillis()),
+                            HttpStatus.BAD_REQUEST.value()
+                    ));
                 }
             }
         }

@@ -1,0 +1,49 @@
+.visualization-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.visualization-container h4 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.array-display {
+  display: flex;
+  flex-wrap: wrap; /* Allow cells to wrap on smaller screens */
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.array-display strong {
+  margin-right: 10px;
+  min-width: 180px; /* Adjust as needed */
+}
+
+.array-cell {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  margin: 2px;
+  min-width: 25px; /* Ensure numbers are visible */
+  text-align: center;
+  font-family: monospace;
+  border-radius: 3px;
+}
+
+.conceptual-cell.is-one {
+  background-color: #90ee90; /* Light green for 1s */
+  color: #006400; /* Dark green text */
+}
+
+.conceptual-cell.is-zero {
+  background-color: #ffcccb; /* Light red for 0s */
+  color: #a52a2a; /* Brown text */
+}
+
+.conceptual-cell.in-max-run {
+  border: 2px solid blue; /* Highlight the max run */
+  font-weight: bold;
+}
